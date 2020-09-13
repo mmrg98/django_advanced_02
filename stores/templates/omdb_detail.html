@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>detail</title>
+  </head>
+  <body>
+    <form class="form-inline my-2 my-lg-0" method="get" action="{% url 'omdb' %}">
+                <input name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+              <div >
+
+
+                <div class="row m-2">
+                  {%  for v in response.values %}
+
+                    <h5 class="card-title">{{v}}</h5>
+
+                  </div>
+
+
+                {% endfor %}
+              </div>
+  </body>
+</html>

@@ -21,9 +21,12 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('list/', views.store_list, name='list'),
+    path('stores/', views.store_list, name='list'),
+    path('stores/create/',views.create_store ,name='create'),
+    path('stores/<str:store_slug>/',views.store_detail ,name='detail'),
+    path('omdb/',views.omdb ,name='omdb'),
+    path('omdb/<str:mov_id>/',views.omdb_detail ,name='omdb-detail'),
 ]
 
 urlpatterns+=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns+=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-

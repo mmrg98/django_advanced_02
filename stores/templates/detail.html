@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Detail{% endblock title %}
+
+{% block content %}
+
+<br>
+<div class="card">
+  <h5 class="card-header">StoreModelForm Info</h5>
+  <!-- {% if restaurant.logo %}
+    <img class="card-img-top" src="{{restaurant.logo.url}}" alt="Hey Noob, look at me...">
+  {% endif %}-->
+  <div class="card-body">
+    <h5 class="card-title">{{store.name}}</h5>
+    <p class="card-text">{{store.description|linebreaks}}</p>
+
+  </div>
+</div>
+{% endblock content %}
